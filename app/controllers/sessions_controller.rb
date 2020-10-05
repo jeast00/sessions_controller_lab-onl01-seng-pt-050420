@@ -6,10 +6,6 @@ class SessionsController < ApplicationController
   def create
     session[:name] = params[:name]
     !params[:name] || params[:name].empty? ? redirect_to '/login' : redirect_to '/'
-      redirect_to '/login'
-    else
-      redirect_to '/'
-    end
   end
 
   def destroy
